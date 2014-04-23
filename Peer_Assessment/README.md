@@ -30,16 +30,14 @@
 		expressions to extract mean and standard deviation variables. A new table for 
 		extracted variable measurements with dimensions 10299 by 66.
 	
-### STEP 3-4: 1) Uses descriptive activity names to name the activities in the data set. 
-###			  2) Appropriately labels the data set with descriptive measurement names.
+### STEP 3-4: 1) Uses descriptive activity names to name the activities in the data set. 2) Appropriately labels the data set with descriptive measurement names.
 	7. Translate numeric codes in y_train.txt y_test.txt with word descriptions in 
 		activity_labels.txt by using match() function on all rows.
 	
 	8. Combine subjects, activities, filteredData tables into "dataset" table by using 
 		cbind() function.
 
-### STEP 5: Creates a second, independent tidy data set with the average of each 
-###         variable for each activity and each subject.
+### STEP 5: Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 	9. Load package "reshape2" to use melt() and dcast() functions
 
 	10. melt "dataset" table by "subject" and "activity" variables in first 2 columns.
