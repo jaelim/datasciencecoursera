@@ -4,7 +4,7 @@
 * Author: Jae Lim
 * Date: April 22, 2014
 
-### DOWNLOADING RAW DATA
+### STEP 0: DOWNLOADING RAW DATA
 
 1. Raw data is saved in a Zip file which is downloadable from this linked web:
 	https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
