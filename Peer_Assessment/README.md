@@ -5,7 +5,8 @@
 * Date: April 22, 2014
 
 ### STEP 0: Download Raw Data
-	1. Find a raw data file in zip format, which is downloadable from this web address: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+	1. Find a raw data file in zip format, which is downloadable from this web address: 
+		https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 	
 	2. Create a "Data" folder in "datasciencecoursera" folder, if it's not already created.
 
@@ -20,12 +21,15 @@
 ### STEP 2: Extracts only the mean and standard deviation of measurement variables.
 	5. Load features.txt & Add Measurement Labels
 
-	6. Extract the mean() & std() measurements using Regular Expressions. There are a total of 66 variables extracted and put into a tidy data table. I used grep() function with regular expressions to extract the mean and standard deviation variables. A new table of extracted variable measurements has dimensions of 10299 by 66.
+	6. Extract the mean() & std() measurements using Regular Expressions. There are a total of 66 variables extracted 
+		and put into a tidy data table. I used grep() function with regular expressions to extract the mean and 
+		standard deviation variables. A new table of extracted variable measurements has dimensions of 10299 by 66.
 	
 ### STEP 3-4: 1) Uses descriptive activity names to name the activities in the data set. 2) Appropriately labels the data set with descriptive measurement names.
 	7. Map & translate numeric codes in y_train.txt y_test.txt with word descriptions found in activity_labels.txt by using match() function on all rows.
 		
-	8. Re-write data labels (column names) with descriptive names. I used series of gsub() functions and regular expressions to remove "-", "()", and replace short names to full names. Duplicate strings "BodyBody" are replaced with "body"
+	8. Re-write data labels (column names) with descriptive names. I used series of gsub() functions and regular expressions to 
+		remove "-", "()", and replace short names to full names. Duplicate strings "BodyBody" are replaced with "body"
 	
 	9. Combine subjects, activities, filteredData tables into "dataset" table by using cbind() function.
 
