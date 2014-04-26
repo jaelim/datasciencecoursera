@@ -61,6 +61,19 @@ activityLabel <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
 activities <- cbind(activityCode, activityLabel$V2[match(activityCode$V1,activityLabel$V1)])
 colnames(activities) <- c("activity.code", "activity")
 
+# Re-write data labels (column names) with descriptive names.
+
+n1 <- gsub("\\(\\)","", tolower(names(filteredData)))
+n2 <- gsub("^t", "time-", n1)
+n3 <- gsub("^f", "frequency-", n2)
+n4 <- gsub("(acc)", "-acceleration", n3)
+n5 <- gsub("(gyro)", "-angular-velocity", n4)
+n6 <- gsub("(mag)", "-magnitude", n5)
+n7 <- gsub("(bodybody)", "body", n6)
+n8 <- gsub("(jerk)", "-jerk", n7)
+n9 <- gsub("(std)", "standard-deviation", n8)
+colnames(filteredData) <- n9
+
 # Combine All Data Frames
 
 dataset <- cbind(subjects, activities, filteredData)
