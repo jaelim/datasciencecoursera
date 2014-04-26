@@ -41,7 +41,6 @@ colnames(data) <- features$V2
 
 filteredNames <- grep("-mean\\(\\)|-std\\(\\)", names(data))
 filteredData <- data[filteredNames]
-names(filteredData)
 
 ## STEP 3-4: 1) Uses descriptive activity names to name the activities in the data set.
 ##           2) Appropriately labels the data set with descriptive measurement names.
@@ -73,6 +72,7 @@ n7 <- gsub("(bodybody)", "body", n6)
 n8 <- gsub("(jerk)", "-jerk", n7)
 n9 <- gsub("(std)", "standard-deviation", n8)
 colnames(filteredData) <- n9
+sort(names(filteredData))
 
 # Combine All Data Frames
 
