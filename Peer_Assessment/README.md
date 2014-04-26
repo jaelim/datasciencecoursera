@@ -30,8 +30,8 @@
 	7. Map & translate numeric codes in y_train.txt y_test.txt with word descriptions found in activity_labels.txt by 
 		using match() function on all rows.
 		
-	8. Re-write data labels (column names) with descriptive names. I used series of gsub() functions and regular expressions to 
-		remove "-", "()", and replace short names to full names. Duplicate strings "BodyBody" are replaced with "body"
+	8. Re-write data labels (column names) with descriptive names. I used series of gsub() functions and regular expressions 
+		to remove "-", "()", and replace short names to full names. Duplicate strings "BodyBody" are replaced with "body"
 	
 	9. Combine subjects, activities, filteredData tables into "dataset" table by using cbind() function.
 
