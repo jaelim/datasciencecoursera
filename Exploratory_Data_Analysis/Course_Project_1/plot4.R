@@ -1,7 +1,7 @@
 # Jae Lim
 # Exploratory Data Analysis
 # Course Project 1 - 5/9/14
-# plot2.R
+# plot4.R
 
 
 # Change working directory & Create data directory if non-existent
